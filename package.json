@@ -18,9 +18,11 @@
   },
   "devDependencies": {
     "eslint-config-prettier": "^10.1.8",
-    "turbo": "^2"
+    "turbo": "^2",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
+    "@nuxt/ui": "^4.2.1",
     "better-sqlite3": "^12.5.0"
   }
 }

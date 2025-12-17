@@ -1,10 +1,14 @@
 {
   // https://nuxt.com/docs/guide/concepts/typescript
-  "files": [],
-  "references": [
-    { "path": "./.nuxt/tsconfig.app.json" },
-    { "path": "./.nuxt/tsconfig.server.json" },
-    { "path": "./.nuxt/tsconfig.shared.json" },
-    { "path": "./.nuxt/tsconfig.node.json" }
-  ]
+  // In monorepos, Volar/TS can sometimes bind .vue files to an "inferred" project
+  // instead of Nuxt's generated TS project, which breaks auto-complete for
+  // auto-registered components (e.g. Nuxt UI's <UButton />).
+  //
+  // Extending Nuxt's generated tsconfig makes the Nuxt project the owner of
+  // files in ./app/** and ensures GlobalComponents types are available.
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    // Inherit from root tsconfig for consistency
+    // Most settings are already in .nuxt/tsconfig.json, but we can override if needed
+  }
 }
