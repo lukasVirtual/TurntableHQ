@@ -1,0 +1,25 @@
+{
+  "name": "turntablehq",
+  "private": true,
+  "packageManager": "bun@1.3.4",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "dev:landing": "turbo dev --filter=landing",
+    "dev:turntable": "turbo dev --filter=turntable",
+    "build:landing": "turbo build --filter=landing",
+    "build:turntable": "turbo build --filter=turntable"
+  },
+  "devDependencies": {
+    "turbo": "^2"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.5.0"
+  }
+}
