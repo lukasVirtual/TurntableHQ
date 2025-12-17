@@ -1,92 +1,99 @@
 <script setup lang="ts">
 // Hero section content - customize these
 const hero = {
-  title: 'Build products people love, faster than ever',
-  description: 'TurntableHQ gives you the tools, workflows, and insights to ship amazing products. Start building today and see results in minutes.',
-  primaryCta: { label: 'Start for free', to: '#' },
-  secondaryCta: { label: 'Book a demo', to: '#' }
+  title: "Build products people love, faster than ever",
+  description:
+    "TurntableHQ gives you the tools, workflows, and insights to ship amazing products. Start building today and see results in minutes.",
+  primaryCta: { label: "Start for free", to: "#" },
+  secondaryCta: { label: "Book a demo", to: "#" }
 }
 
 // Features - customize these
 const features = [
   {
-    icon: 'i-lucide-zap',
-    title: 'Lightning Fast',
-    description: 'Built for speed with optimized performance. Your users will love the instant response times.'
+    icon: "i-lucide-zap",
+    title: "Lightning Fast",
+    description:
+      "Built for speed with optimized performance. Your users will love the instant response times."
   },
   {
-    icon: 'i-lucide-shield-check',
-    title: 'Secure by Default',
-    description: 'Enterprise-grade security with end-to-end encryption. Your data is always protected.'
+    icon: "i-lucide-shield-check",
+    title: "Secure by Default",
+    description:
+      "Enterprise-grade security with end-to-end encryption. Your data is always protected."
   },
   {
-    icon: 'i-lucide-blocks',
-    title: 'Modular Design',
-    description: 'Pick and choose the features you need. Scale up or down as your needs change.'
+    icon: "i-lucide-blocks",
+    title: "Modular Design",
+    description:
+      "Pick and choose the features you need. Scale up or down as your needs change."
   },
   {
-    icon: 'i-lucide-users',
-    title: 'Team Collaboration',
-    description: 'Work together seamlessly with real-time collaboration tools and shared workspaces.'
+    icon: "i-lucide-users",
+    title: "Team Collaboration",
+    description:
+      "Work together seamlessly with real-time collaboration tools and shared workspaces."
   },
   {
-    icon: 'i-lucide-bar-chart-3',
-    title: 'Powerful Analytics',
-    description: 'Get deep insights into your product with comprehensive analytics and reporting.'
+    icon: "i-lucide-bar-chart-3",
+    title: "Powerful Analytics",
+    description:
+      "Get deep insights into your product with comprehensive analytics and reporting."
   },
   {
-    icon: 'i-lucide-headphones',
-    title: '24/7 Support',
-    description: 'Our team is always here to help. Get support whenever you need it, day or night.'
+    icon: "i-lucide-headphones",
+    title: "24/7 Support",
+    description:
+      "Our team is always here to help. Get support whenever you need it, day or night."
   }
 ]
 
 // Pricing plans - customize these
 const pricingPlans = [
   {
-    name: 'Starter',
-    description: 'Perfect for individuals and small projects',
-    price: '$0',
-    period: '/month',
+    name: "Starter",
+    description: "Perfect for individuals and small projects",
+    price: "$0",
+    period: "/month",
     features: [
-      'Up to 3 projects',
-      '1 team member',
-      'Basic analytics',
-      'Community support'
+      "Up to 3 projects",
+      "1 team member",
+      "Basic analytics",
+      "Community support"
     ],
-    cta: { label: 'Get started', to: '#' },
+    cta: { label: "Get started", to: "#" },
     highlight: false
   },
   {
-    name: 'Pro',
-    description: 'Best for growing teams and businesses',
-    price: '$29',
-    period: '/month',
+    name: "Pro",
+    description: "Best for growing teams and businesses",
+    price: "$29",
+    period: "/month",
     features: [
-      'Unlimited projects',
-      'Up to 10 team members',
-      'Advanced analytics',
-      'Priority support',
-      'Custom integrations',
-      'API access'
+      "Unlimited projects",
+      "Up to 10 team members",
+      "Advanced analytics",
+      "Priority support",
+      "Custom integrations",
+      "API access"
     ],
-    cta: { label: 'Start free trial', to: '#' },
+    cta: { label: "Start free trial", to: "#" },
     highlight: true
   },
   {
-    name: 'Enterprise',
-    description: 'For large organizations with custom needs',
-    price: 'Custom',
-    period: '',
+    name: "Enterprise",
+    description: "For large organizations with custom needs",
+    price: "Custom",
+    period: "",
     features: [
-      'Everything in Pro',
-      'Unlimited team members',
-      'Dedicated account manager',
-      'Custom contracts',
-      'SLA guarantee',
-      'On-premise option'
+      "Everything in Pro",
+      "Unlimited team members",
+      "Dedicated account manager",
+      "Custom contracts",
+      "SLA guarantee",
+      "On-premise option"
     ],
-    cta: { label: 'Contact sales', to: '#' },
+    cta: { label: "Contact sales", to: "#" },
     highlight: false
   }
 ]
@@ -94,46 +101,54 @@ const pricingPlans = [
 // Testimonials - customize these
 const testimonials = [
   {
-    quote: 'TurntableHQ transformed how our team works. We shipped 3x faster in the first month.',
-    author: 'Sarah Chen',
-    role: 'CTO at TechStartup',
-    avatar: 'https://i.pravatar.cc/150?img=1'
+    quote:
+      "TurntableHQ transformed how our team works. We shipped 3x faster in the first month.",
+    author: "Sarah Chen",
+    role: "CTO at TechStartup",
+    avatar: "https://i.pravatar.cc/150?img=1"
   },
   {
-    quote: 'The best investment we made this year. Simple, powerful, and the support is incredible.',
-    author: 'Michael Roberts',
-    role: 'Founder at ProductCo',
-    avatar: 'https://i.pravatar.cc/150?img=3'
+    quote:
+      "The best investment we made this year. Simple, powerful, and the support is incredible.",
+    author: "Michael Roberts",
+    role: "Founder at ProductCo",
+    avatar: "https://i.pravatar.cc/150?img=3"
   },
   {
-    quote: 'Finally, a tool that just works. No steep learning curve, just results from day one.',
-    author: 'Emily Watson',
-    role: 'Product Lead at ScaleUp',
-    avatar: 'https://i.pravatar.cc/150?img=5'
+    quote:
+      "Finally, a tool that just works. No steep learning curve, just results from day one.",
+    author: "Emily Watson",
+    role: "Product Lead at ScaleUp",
+    avatar: "https://i.pravatar.cc/150?img=5"
   }
 ]
 
 // FAQ items - customize these
 const faqItems = [
   {
-    label: 'How do I get started?',
-    content: 'Simply sign up for a free account and you\'ll be guided through the setup process. It takes less than 5 minutes to get your first project running.'
+    label: "How do I get started?",
+    content:
+      "Simply sign up for a free account and you'll be guided through the setup process. It takes less than 5 minutes to get your first project running."
   },
   {
-    label: 'Can I cancel my subscription anytime?',
-    content: 'Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees.'
+    label: "Can I cancel my subscription anytime?",
+    content:
+      "Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees."
   },
   {
-    label: 'Do you offer a free trial?',
-    content: 'Yes! All paid plans come with a 14-day free trial. No credit card required to start.'
+    label: "Do you offer a free trial?",
+    content:
+      "Yes! All paid plans come with a 14-day free trial. No credit card required to start."
   },
   {
-    label: 'What kind of support do you offer?',
-    content: 'We offer email support for all plans, priority support for Pro users, and dedicated account managers for Enterprise customers.'
+    label: "What kind of support do you offer?",
+    content:
+      "We offer email support for all plans, priority support for Pro users, and dedicated account managers for Enterprise customers."
   },
   {
-    label: 'Is my data secure?',
-    content: 'Absolutely. We use industry-standard encryption and security practices. Your data is stored securely and backed up regularly.'
+    label: "Is my data secure?",
+    content:
+      "Absolutely. We use industry-standard encryption and security practices. Your data is stored securely and backed up regularly."
   }
 ]
 </script>
@@ -160,24 +175,38 @@ const faqItems = [
       ]"
     >
       <template #title>
-        <span class="text-primary">Build products</span> people love, faster than ever
+        <span class="text-primary">Build products</span> people love, faster
+        than ever
       </template>
 
       <!-- Hero image/illustration placeholder -->
-      <div class="relative aspect-video rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-default flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-grid-slate-100 dark:bg-grid-slate-700/25 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
+      <div
+        class="relative aspect-video rounded-xl bg-linear-to-br from-primary/20 to-primary/5 border border-default flex items-center justify-center overflow-hidden"
+      >
+        <div
+          class="absolute inset-0 bg-grid-slate-100 dark:bg-grid-slate-700/25 mask-[linear-gradient(0deg,white,rgba(255,255,255,0.6))]"
+        />
         <div class="relative text-center p-8">
-          <UIcon name="i-lucide-play-circle" class="w-16 h-16 text-primary mb-4" />
-          <p class="text-muted">Add your product screenshot or demo video here</p>
+          <UIcon
+            name="i-lucide-play-circle"
+            class="w-16 h-16 text-primary mb-4"
+          />
+          <p class="text-muted">
+            Add your product screenshot or demo video here
+          </p>
         </div>
       </div>
     </UPageHero>
 
     <!-- Logos/Trust Section -->
-    <UPageSection class="!pt-0">
+    <UPageSection class="pt-0!">
       <div class="text-center">
-        <p class="text-sm text-muted mb-6">Trusted by teams at</p>
-        <div class="flex flex-wrap justify-center items-center gap-8 opacity-50">
+        <p class="text-sm text-muted mb-6">
+          Trusted by teams at
+        </p>
+        <div
+          class="flex flex-wrap justify-center items-center gap-8 opacity-50"
+        >
           <!-- Replace with actual company logos -->
           <span class="text-xl font-bold">Company 1</span>
           <span class="text-xl font-bold">Company 2</span>
@@ -208,18 +237,27 @@ const faqItems = [
         <UCard
           v-for="plan in pricingPlans"
           :key="plan.name"
-          :class="[
-            'relative',
-            plan.highlight ? 'ring-2 ring-primary' : ''
-          ]"
+          :class="['relative', plan.highlight ? 'ring-2 ring-primary' : '']"
         >
-          <div v-if="plan.highlight" class="absolute left-1/2 -translate-x-1/2">
-            <UBadge color="primary" variant="solid">Most Popular</UBadge>
+          <div
+            v-if="plan.highlight"
+            class="absolute left-1/2 -translate-x-1/2"
+          >
+            <UBadge
+              color="primary"
+              variant="solid"
+            >
+              Most Popular
+            </UBadge>
           </div>
 
           <div class="text-center mb-6">
-            <h3 class="text-xl font-bold mb-2">{{ plan.name }}</h3>
-            <p class="text-sm text-muted mb-4">{{ plan.description }}</p>
+            <h3 class="text-xl font-bold mb-2">
+              {{ plan.name }}
+            </h3>
+            <p class="text-sm text-muted mb-4">
+              {{ plan.description }}
+            </p>
             <div class="flex items-baseline justify-center gap-1">
               <span class="text-4xl font-bold">{{ plan.price }}</span>
               <span class="text-muted">{{ plan.period }}</span>
@@ -227,8 +265,15 @@ const faqItems = [
           </div>
 
           <ul class="space-y-3 mb-6">
-            <li v-for="feature in plan.features" :key="feature" class="flex items-center gap-2">
-              <UIcon name="i-lucide-check" class="w-5 h-5 text-primary shrink-0" />
+            <li
+              v-for="feature in plan.features"
+              :key="feature"
+              class="flex items-center gap-2"
+            >
+              <UIcon
+                name="i-lucide-check"
+                class="w-5 h-5 text-primary shrink-0"
+              />
               <span class="text-sm">{{ feature }}</span>
             </li>
           </ul>
@@ -251,7 +296,10 @@ const faqItems = [
       description="See what our customers have to say about their experience."
     >
       <div class="grid md:grid-cols-3 gap-8 mt-12">
-        <UCard v-for="testimonial in testimonials" :key="testimonial.author">
+        <UCard
+          v-for="testimonial in testimonials"
+          :key="testimonial.author"
+        >
           <div class="flex flex-col h-full">
             <div class="flex gap-1 mb-4">
               <UIcon
@@ -261,12 +309,22 @@ const faqItems = [
                 class="w-5 h-5 text-yellow-500 fill-yellow-500"
               />
             </div>
-            <p class="text-muted mb-6 flex-grow">"{{ testimonial.quote }}"</p>
+            <p class="text-muted mb-6 flex-grow">
+              "{{ testimonial.quote }}"
+            </p>
             <div class="flex items-center gap-3">
-              <UAvatar :src="testimonial.avatar" :alt="testimonial.author" size="md" />
+              <UAvatar
+                :src="testimonial.avatar"
+                :alt="testimonial.author"
+                size="md"
+              />
               <div>
-                <p class="font-semibold">{{ testimonial.author }}</p>
-                <p class="text-sm text-muted">{{ testimonial.role }}</p>
+                <p class="font-semibold">
+                  {{ testimonial.author }}
+                </p>
+                <p class="text-sm text-muted">
+                  {{ testimonial.role }}
+                </p>
               </div>
             </div>
           </div>

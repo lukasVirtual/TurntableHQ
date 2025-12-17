@@ -17,6 +17,7 @@
     "build:turntable": "turbo build --filter=turntable"
   },
   "devDependencies": {
+    "eslint-config-prettier": "^10.1.8",
     "turbo": "^2"
   },
   "dependencies": {

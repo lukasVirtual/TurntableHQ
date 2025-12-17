@@ -5,7 +5,10 @@ defineProps<{
 </script>
 
 <template>
-  <div class="flex items-center gap-2" :class="$props.class">
+  <div
+    class="flex items-center gap-2"
+    :class="$props.class"
+  >
     <!-- Replace this SVG with your own logo -->
     <svg
       class="w-8 h-8 text-primary"
@@ -13,12 +16,43 @@ defineProps<{
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
-      <circle cx="12" cy="12" r="4" fill="currentColor" />
-      <path d="M12 2V6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-      <path d="M12 18V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-      <path d="M2 12H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-      <path d="M18 12H22" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      <circle
+        cx="12"
+        cy="12"
+        r="10"
+        stroke="currentColor"
+        stroke-width="2"
+      />
+      <circle
+        cx="12"
+        cy="12"
+        r="4"
+        fill="currentColor"
+      />
+      <path
+        d="M12 2V6"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+      <path
+        d="M12 18V22"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+      <path
+        d="M2 12H6"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+      <path
+        d="M18 12H22"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
     </svg>
     <span class="font-bold text-lg">TurntableHQ</span>
   </div>
