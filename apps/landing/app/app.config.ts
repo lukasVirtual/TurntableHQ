@@ -5,7 +5,6 @@ export default defineAppConfig({
       neutral: "slate"
     }
   },
-  // Site configuration - customize these values
   site: {
     name: "TurntableHQ",
     description: "Build amazing products faster with our powerful platform.",

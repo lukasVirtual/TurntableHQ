@@ -1,48 +1,30 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-
 export default defineNuxtConfig({
-    modules: [
-        "@nuxt/eslint",
-        "@nuxt/ui",
-        "@nuxt/content",
-        "@nuxt/image"
-    ],
+	modules: ["@nuxt/eslint", "@nuxt/ui", "@nuxt/content", "@nuxt/image", "@clerk/nuxt"],
 
-    devtools: {
-        enabled: true
-    },
+	devtools: {
+		enabled: true,
+	},
 
-    css: ["~/assets/css/main.css"],
+	css: ["~/assets/css/main.css"],
 
-    routeRules: {
-        "/": { prerender: true }
-    },
+	routeRules: {
+		"/": { prerender: true },
+		"/dashboard/**": { ssr: false },
+		"/sign-in/**": { ssr: false },
+		"/sign-up/**": { ssr: false },
+	},
 
-    compatibilityDate: "2025-01-15",
+	compatibilityDate: "2025-01-15",
 
-    eslint: {
-        config: {
-            stylistic: {
-                semi: false,
-                indent: "tab",
-                quotes: "double",
-                commaDangle: "never",
-                braceStyle: "1tbs"
-            }
-        }
-    }
+	eslint: {
+		config: {
+			stylistic: {
+				semi: false,
+				indent: "tab",
+				quotes: "double",
+				commaDangle: "never",
+				braceStyle: "1tbs",
+			},
+		},
+	},
 })
-// prettier
-// {
-//   "semi": false,
-//   "singleQuote": false,
-//   "bracketSpacing": true,
-//   "arrowParens": "always",
-//   "endOfLine": "lf",
-//   "printWidth": 120,
-//   "quoteProps": "as-needed",
-//   "singleAttributePerLine": true,
-//   "tabWidth": 4,
-//   "useTabs": true,
-//   "vueIndentScriptAndStyle": false
-// }

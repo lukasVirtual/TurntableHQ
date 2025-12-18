@@ -1,12 +1,31 @@
 <script setup lang="ts">
-// Hero section content - customize these
-const hero = {
+import { useAuth } from "@clerk/nuxt/composables"
+
+const { isSignedIn } = useAuth()
+
+const pricingAppearance = {
+	variables: {
+		colorPrimary: "#4f46e5", // Indigo-600
+		colorBackground: "#ffffff", // White card background
+		colorInputBackground: "#f1f5f9", // Slate-100
+		colorText: "#1e293b", // Slate-800
+		colorTextSecondary: "#64748b", // Slate-500
+		colorNeutral: "#cbd5e1", // Slate-300
+		borderRadius: "0.5rem", // Match site border radius
+		fontFamily: "Inter, 'Public Sans', system-ui, sans-serif",
+	},
+}
+
+const hero = computed(() => ({
 	title: "Build products people love, faster than ever",
 	description:
 		"TurntableHQ gives you the tools, workflows, and insights to ship amazing products. Start building today and see results in minutes.",
-	primaryCta: { label: "Start for free", to: "#" },
+	primaryCta: {
+		label: isSignedIn.value ? "Go to Dashboard" : "Start for free",
+		to: isSignedIn.value ? "/dashboard" : "/sign-up",
+	},
 	secondaryCta: { label: "Book a demo", to: "#" },
-}
+}))
 
 // Features - customize these
 const features = [
@@ -50,7 +69,7 @@ const pricingPlans = [
 		price: "$0",
 		period: "/month",
 		features: ["Up to 3 projects", "1 team member", "Basic analytics", "Community support"],
-		cta: { label: "Get started", to: "#" },
+		cta: { label: "Get started", to: "/sign-up" },
 		highlight: false,
 	},
 	{
@@ -66,7 +85,7 @@ const pricingPlans = [
 			"Custom integrations",
 			"API access",
 		],
-		cta: { label: "Start free trial", to: "#" },
+		cta: { label: "Start free trial", to: "/sign-up" },
 		highlight: true,
 	},
 	{
@@ -209,8 +228,8 @@ const faqItems = [
 			title="Simple, transparent pricing"
 			description="Choose the plan that fits your needs. Upgrade or downgrade anytime."
 		>
-			<div class="grid md:grid-cols-3 gap-8 mt-12">
-				<UCard
+			<!-- <div class="grid md:grid-cols-3 gap-8 mt-12"> -->
+				<!-- <UCard
 					v-for="plan in pricingPlans"
 					:key="plan.name"
 					:class="['relative', plan.highlight ? 'ring-2 ring-primary' : '']"
@@ -261,8 +280,10 @@ const faqItems = [
 						:variant="plan.highlight ? 'solid' : 'outline'"
 						block
 					/>
-				</UCard>
-			</div>
+				</UCard> -->
+
+			<PricingTable :appearance="pricingAppearance" />
+			<!-- </div> -->
 		</UPageSection>
 
 		<!-- Testimonials Section -->
@@ -312,20 +333,19 @@ const faqItems = [
 			title="Frequently asked questions"
 			description="Got questions? We've got answers."
 		>
-			<div class="max-w-3xl mx-auto mt-12">
+			<div class="w-3xl text-left mx-auto mt-12">
 				<UAccordion :items="faqItems" />
 			</div>
 		</UPageSection>
 
-		<!-- CTA Section -->
 		<UPageSection>
 			<UPageCTA
 				title="Ready to get started?"
 				description="Join thousands of teams building better products with TurntableHQ. Start your free trial today."
 				:links="[
 					{
-						label: 'Start for free',
-						to: '#',
+						label: isSignedIn ? 'Go to Dashboard' : 'Start for free',
+						to: isSignedIn ? '/dashboard' : '/sign-up',
 						trailingIcon: 'i-lucide-arrow-right',
 						size: 'xl',
 					},

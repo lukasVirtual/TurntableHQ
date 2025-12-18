@@ -16,8 +16,4 @@
         ]
     ],
     "typescript.tsdk": "node_modules/typescript/lib",
-    "vue.server.hybridMode": false,
-    "vue.complete.casing.tags": "kebab",
-    "vue.server.vitePress.supportMdFile": false,
-    "vue.server.petiteVue.supportHtmlFile": false
 }
