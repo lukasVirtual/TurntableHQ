@@ -2,17 +2,24 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
-    '@nuxt/ui'
+    '@nuxt/ui',
+    '@tresjs/nuxt'
   ],
 
+  tres: {
+    devtools: true,
+    glsl: true,
+    
+  },
   devtools: {
     enabled: true
-  },
+  },  
 
   css: ['assets/css/main.css'],
 
   routeRules: {
-    '/': { prerender: true }
+    '/': { prerender: true },
+    '/render/**': { ssr: false }
   },
 
   compatibilityDate: '2025-01-15',

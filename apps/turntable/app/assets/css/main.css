@@ -2,17 +2,55 @@
 @import "@nuxt/ui";
 
 @theme static {
-  --font-sans: 'Public Sans', sans-serif;
+	--font-sans: "Public Sans", sans-serif;
 
-  --color-green-50: #EFFDF5;
-  --color-green-100: #D9FBE8;
-  --color-green-200: #B3F5D1;
-  --color-green-300: #75EDAE;
-  --color-green-400: #00DC82;
-  --color-green-500: #00C16A;
-  --color-green-600: #00A155;
-  --color-green-700: #007F45;
-  --color-green-800: #016538;
-  --color-green-900: #0A5331;
-  --color-green-950: #052E16;
+	--color-green-50: #effdf5;
+	--color-green-100: #d9fbe8;
+	--color-green-200: #b3f5d1;
+	--color-green-300: #75edae;
+	--color-green-400: #00dc82;
+	--color-green-500: #00c16a;
+	--color-green-600: #00a155;
+	--color-green-700: #007f45;
+	--color-green-800: #016538;
+	--color-green-900: #0a5331;
+	--color-green-950: #052e16;
+}
+
+/* Fix halo/double text rendering issue */
+* {
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important;
+	text-rendering: optimizeSpeed !important;
+}
+
+/* Remove any potential text shadows or filters that might cause halo effects */
+* {
+	text-shadow: none !important;
+	filter: none !important;
+	-webkit-filter: none !important;
+	backdrop-filter: none !important;
+}
+
+/* Force clean text rendering */
+body, html {
+	font-smooth: always !important;
+	-webkit-text-stroke: 0 !important;
+	text-stroke: 0 !important;
+	text-rendering: geometricPrecision !important;
+}
+
+/* Specific fixes for common halo causes */
+.u-button, .u-card, .u-navigation-menu, .u-icon, .u-text, span, p, h1, h2, h3, h4, h5, h6 {
+	text-shadow: none !important;
+	filter: none !important;
+	-webkit-filter: none !important;
+	transform: translateZ(0) !important;
+	will-change: auto !important;
+}
+
+/* Remove any potential outline or border effects */
+*:focus {
+	outline: none !important;
+	box-shadow: none !important;
 }

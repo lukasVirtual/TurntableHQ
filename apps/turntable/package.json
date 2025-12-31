@@ -4,8 +4,8 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
-    "preview": "nuxt preview",
+    "dev": "nuxt dev --port 3001",
+    "preview": "nuxt preview --port 3001",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "typecheck": "nuxt typecheck"
@@ -13,12 +13,16 @@
   "dependencies": {
     "@iconify-json/lucide": "^1.2.74",
     "@iconify-json/simple-icons": "^1.2.59",
-    "@nuxt/ui": "^4.2.1",
+    "@nuxt/ui": "^4.3.0",
+    "@tresjs/cientos": "^5.2.0",
+    "@tresjs/nuxt": "^5.1.2",
+    "@turntablehq/shared": "workspace:*",
     "nuxt": "^4.2.2",
-    "@turntablehq/shared": "workspace:*"
+    "three": "^0.182.0"
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.10.0",
+    "@types/three": "^0.182.0",
     "eslint": "^9.39.1",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3",
